@@ -1,0 +1,334 @@
+---
+title: "Git"
+author: "Joseph Longworth"
+format: revealjs
+editor: visual
+---
+
+# Session Outline
+
+::: columns
+::: {.column width="50%"}
+![](Images/git.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+-   What is Version Control Software and it's benefit
+
+-   Fundamentals of Git interaction (Work Locally)
+
+-   Git Hosting Services and Collaboration
+:::
+:::
+
+## Who is this?
+
+::: columns
+::: {.column width="40%"}
+![](Images/Linus.jpg)
+:::
+
+::: {.column width="60%"}
+::: incremental
+-   Anyone remember who this was?
+-   Linus Torvalds
+-   Having created Linux in 1991 in 2005 he created Git.
+:::
+:::
+:::
+
+# Version Control
+
+## The Chaos of Uncontrolled Code
+
+::: columns
+::: {.column width="40%"}
+![](Images/phd101212s%20(2).gif)
+:::
+
+::: {.column width="60%"}
+-   Renaming our files with version "indicators" quickly gets confused.
+-   This is complex when working alone when working collaboratively it's a 🤬
+-   Lost changes, confusion, and frustration become commonplace.
+:::
+:::
+
+::: notes
+Developing software without version control is like working on a messy desk. It's hard to find specific versions, and mistakes can easily overwrite your progress. Version control systems offer a much-needed solution.
+:::
+
+## Introducing Version Control
+
+::: columns
+::: {.column width="50%"}
+Think about:
+
+::: incremental
+-   How have you tracked your files in the past
+-   How would describe you edits over time
+-   How would you explain it to someone else
+:::
+:::
+
+::: {.column width="50%"}
+*5 min video on version control general concept*
+
+<https://git-scm.com/video/what-is-version-control>
+:::
+:::
+
+# Git Fundementals
+
+## How to Start with Git
+
+::: columns
+::: {.column width="50%"}
+Think about:
+
+::: incremental
+-   We should have git installed already 🤞
+
+-   What `git configs` are needed to get started
+
+-   Look for git `git init`
+
+-   What is `git add` and `git commit`
+:::
+:::
+
+::: {.column width="50%"}
+*4 min video Git*
+
+<https://git-scm.com/video/get-going>
+:::
+:::
+
+## Git Commands Recap
+
+|                     |                                     |
+|---------------------|-------------------------------------|
+| `git init`          | Creates a new Repository            |
+| `git add`           | Moves files to staging area         |
+| `git commit -m ""`  | Commits staged files to git history |
+| `git status`        | Current State of our stage          |
+| `git log –-oneline` | History view (condensed)            |
+
+# Class Activity 1
+
+## Class Activity 1.1 {.smaller}
+
+1.  Open you linux terminal that we had form the last session
+2.  Change directory `cd` to the home directory
+3.  Run git configs
+    1.  `git config --global user.name "MeMario"`
+
+    2.  `git config --global user.email "@gmail.com"`
+4.  run `git init first_git`
+5.  change directory into the new git tracked directory `cd ???`
+6.  Create a file with `touch file_1.txt`
+7.  Check `git status`
+
+## Class Activity 1.2 {.smaller}
+
+::: columns
+::: {.column width="50%"}
+1.  `git add file_1.txt` to add the file to the 'stage'
+
+2.  Check `git status`
+
+3.  `git commit -m "Describe your commit"`
+
+4.  Repeat creating 2 more commits (use nano to edit your file)
+
+5.  run `git log --oneline` what can you see?
+:::
+
+::: {.column width="50%"}
+![](Images/git_commit.png){fig-align="center"}
+:::
+:::
+
+## Extra bits
+
+::: columns
+::: {.column width="50%"}
+**.gitignore**
+
+![](Images/gitignore.PNG){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+`git add -A`
+
+-   Using the -A all files altered in the repository apart from those in .gitignore will be added.
+:::
+:::
+
+# Coffee Break
+
+![](Images/coffee.webp){fig-align="center"}
+
+# **Git Hosting Services & Collaboration**
+
+## **Git Hosting Services**
+
+::: columns
+::: {.column width="50%"}
+::: columns
+![](Images/will_it_work.png){fig-align="center"}
+:::
+:::
+
+::: {.column width="50%"}
+Git hosting services provide a platform for storing, managing, and collaborating on code using Git.
+:::
+:::
+
+------------------------------------------------------------------------
+
+GitHub and GitLab are powerful tools for managing your code, but they cater to slightly different styles:
+
+::: columns
+::: {.column width="50%"}
+![](Images/github.png)
+
+-   **GitHub:**
+    -   \~ 70 million users
+    -   **Focus:** Open source projects and individual developers.
+    -   **Strengths:** Simple interface, huge open-source community.
+:::
+
+::: {.column width="50%"}
+![](Images/gitlab.png)
+
+-   **GitLab:**
+    -   \~30 million users
+    -   **Focus:** Collaboration and private projects (even for teams!).
+    -   **Strengths:** Built-in project management tools, self-hosting option.
+:::
+:::
+
+## Web vs Local Server
+
+We can work with these we services though likely we will first work with our own institutional server.
+
+::: columns
+::: {.column width="50%"}
+**Internet**
+
+-   <https://github.com/>
+
+-   [https://gitlab.com/](https://about.gitlab.com/)
+:::
+
+::: {.column width="50%"}
+-   **LIH**
+
+    -   [https://git.lih.lu/](https://git.lih.lu/dii1)
+
+    -   <https://gitlab01.lih.lu/>
+
+-   **UNI**
+
+    -   <https://gitlab.lcsb.uni.lu/>
+
+    -   [gitlab-cloud.uni.lu](https://gitlab-cloud.uni.lu/)
+:::
+:::
+
+## Clone vs. Fork: Duplicating a Git Repository
+
+-   **Clone:** Creates a complete copy of a remote repository on your local machine
+    -   Ideal for: Downloading and working on a project without affecting the original.
+-   **Fork:** Creates a copy of a remote repository on your Git hosting service (e.g., GitHub).
+    -   You can make changes and propose them back to the original project through pull requests.
+
+# Class Activity 2
+
+## Class Activity 2
+
+1.  Go to Github and log in. See your current repositories
+
+2.  go to <https://github.com/JosephLongworth/AntigenMicroarray>
+
+3.  Fork the project to your own account
+
+4.  Clone your forked project `git clone "url link found on page"` (use https unless you have the ssh set up)
+
+5.  change to text in the Readme file using `nano`
+
+6.  `git push` the changes and check the website
+
+## Class Activity 2.2
+
+![](Images/clone_button.PNG){fig-align="center"}
+
+## Collaborative Working
+
+::: columns
+::: {.column width="50%"}
+look for:
+
+::: incremental
+-   what is a branch
+-   `git pull`
+-   `git push`
+-   `git merge`
+:::
+:::
+
+::: {.column width="50%"}
+*on version control general concept*
+
+2:40-6min
+
+<https://git-scm.com/video/what-is-git>
+:::
+:::
+
+## Collaboration Commands Recap
+
+|              |                                               |
+|--------------|-----------------------------------------------|
+| `git push`   | Update the remote to your current state       |
+| `git pull`   | Update you local version with the remote      |
+| `git branch` | Create a branch to work in a isolated section |
+| `git merge`  | Merge branches together                       |
+
+![](Images/rstudio.PNG){fig-align="center"}
+
+## Git is in Rstudio
+
+::: columns
+::: {.column width="50%"}
+-   Git is integrated into multiple software for easy use
+
+-   In RStudio we have downloaded our lessons with git
+:::
+
+::: {.column width="50%"}
+![](Images/rstudio.PNG){fig-align="center"}
+:::
+:::
+
+# Class Activity 3
+
+## Class Activity 3 Merging
+
+1.  Open Rstudio
+
+2.  GO to https://github.com/JosephLongworth/Merge_Demonstartion
+
+3.  Using Projects in rstudio GUI clone the repository
+
+4.  Switch branches in rstudio
+
+5.  from the main branch run `git merge branch1` in the Terminal
+
+6.  look at results what could and couldn't be 'auto merged'
+
+7.  Fix conflicts and push back
+
+# Fin
+
+![](Images/57451lkñASsas%20(1).gif){fig-align="center"}

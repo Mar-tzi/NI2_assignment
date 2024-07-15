@@ -1,0 +1,172 @@
+---
+title: "Inkscape"
+author: "Joseph Longworth"
+format: 
+  revealjs:
+    theme: [solarized, JPL.scss] 
+editor: visual
+# custom logo or image in the header (optional)
+# logo: path/to/your/image.png
+---
+
+## What is Vector Graphics?
+
+-   Traditional graphic design software uses raster graphics, made up of pixels.
+
+-   Vector graphics, on the other hand, are based on mathematical paths and can be scaled infinitely without losing quality.
+
+-   This makes them perfect for logos, icons, and **plots** that need to be used in various sizes.
+
+    (People used to print A4 only now we zoom in and out Screen)
+
+## Graphic type
+
+::: columns
+::: {.column width="50%"}
+**Raster**
+
+![](Images/pixels.jfif){fig-align="center"}
+
+-   JPEG
+
+-   TIF
+
+-   PNG
+
+-   WebP
+:::
+
+::: {.column width="50%"}
+**Vector Graphic**
+
+![](Images/instructions.png){fig-align="center"}
+
+-   ai
+
+-   eps
+
+-   PDF (?)
+
+-   **SVG**
+:::
+:::
+
+## Class activity 1 : Explore a JPEG, PNG and SVG. (10 min) {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   Open the Jpeg and PNG (in a browser) Try to zoom in & out.
+
+    -   We could increase resolution but to what level and file size?
+
+-   Open the SVG (in a browser) Try to zoom in & out.
+
+-   Open the SVG in Notepad++ or notepad
+
+    -   (will need to force it to open from software)
+
+-   Ignoring the head what components make up a SVG
+:::
+
+::: {.column width="50%"}
+![](Images/svg.png){fig-align="center"}
+:::
+:::
+
+## Introducing Inkscape
+
+::: columns
+::: {.column width="50%"}
+![](Images/inkscape.PNG){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+::: columns
+Inkscape is a free and powerful open-source software for creating vector graphics.
+:::
+:::
+:::
+
+![](Images/inkscape%202.PNG){fig-align="center"}
+
+## Inkscape vs Adobe Illustrator {.smaller}
+
+![](Images/ai_vs_inkscape.PNG){fig-align="center"}
+
+Affinity: Anouther alternative with a one time payments model (benefit over free...?)
+
+## Basic Operations to draw
+
+We'll watch a video to cover how to use Inkscape to draw. 13 min
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rFYQW2DCM2I?si=5zlF9EOUp2BBlbAO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+## Typical use in science
+
+-   Whilst it may be useful to replace Powerpoint, paint, publisher or biorendor to draw our utalisation in science more likely focuses on figure compiling.
+
+-   Panel arrangements in R e.g. ggarrange, cowplot. often compromise fine controls
+
+-   Alternative approach is output panels in SVG or PNG and arrange in inkscape
+
+## Class activity 2 : 15 min {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   Open Algae_Layout_start
+
+-   Resize the images to 40 mm apart form the 100x magnification
+
+-   Add a square 30\*30 mm and clip to cut crop images to squares of 30x30
+
+-   Using align and distribute to arrange the images in a grid with 5px gaps
+
+-   Add text labels aligning them with the middle of the images with 5mm spacing
+
+-   Group the object and export as a png
+:::
+
+::: {.column width="50%"}
+![](Images/Algae.svg){fig-align="center"}
+:::
+:::
+
+## Scientific Inkscape {.smaller}
+
+![](Images/Resize_Optica.gif){fig-align="center"}
+
+The core extensions are:
+
+1.  **Scale Plots**: Changes the size or aspect ratio of a plot without modifying its text and ticks, making it easy to assemble multi-panel figures. Also works on non-plots.
+
+2.  **Homogenizer**: Sets uniform fonts, font sizes, and stroke widths in a selection.
+
+3.  **Flattener**: Eliminates the structure of imported figures, making them easier to edit. For most imports, this should be the first thing you run.
+
+4.  **Autoexporter**: Automatically refreshes exports of SVGs in a folder, while producing exports immune to the rendering bugs of Office and Acrobat.
+
+5.  **Gallery Viewer**: Quickly view and edit all SVGs in a file or folder.
+
+## Class activity 3 : 15 min {.smaller}
+
+-   Open Inkscape_extenstions_example_start.
+
+-   run scale plots on D to make it 1/2 as wide and 1/3 as tall
+
+-   run flattener and homogeniser to fix all text to 7 pt
+
+-   Set all fill and stroke to 0.8 pt
+
+-   use gridlines and the alignment tool align all plots to a gird matching plot areas
+
+![](Images/Scientific_inkscape.svg){fig-align="center"}
+
+## Assignment
+
+![](Images/assignement.PNG){fig-align="center"}
+
+## The end
+
+![](Images/Thats%20All%20Folks%20Looney%20GIF%20-%20Thats%20All%20Folks%20Looney%20Tunes%20-%20Discover%20&%20Share%20GIFs.gif){fig-align="center"}
